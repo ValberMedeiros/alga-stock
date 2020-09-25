@@ -5,6 +5,7 @@ export interface User {
   user: string
   email: string
   role: 'admin' | 'costumer'
+  token: string
   createdAt: string
   updatedAt: string
 }
