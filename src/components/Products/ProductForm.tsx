@@ -41,7 +41,8 @@ const ProductForm: React.FC<ProductFormProps> = (props) => {
   const [form, setForm] = useState(initialFormState)
 
   useEffect(() => {
-    setForm(initialFormState);
+    setForm(initialFormState)
+    // eslint-disable-next-line
   }, [props.form])
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
