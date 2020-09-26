@@ -4,7 +4,7 @@ export interface User {
   _id: string
   user: string
   email: string
-  role: 'admin' | 'costumer'
+  role: 'admin' | 'customer'
   token: string
   createdAt: string
   updatedAt: string

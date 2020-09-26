@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import withPermission from '../../Utils/HOC/withPermission'
 import Button from '../shared/Button'
 import Form from '../shared/Form'
 import Input from '../shared/Input'
@@ -119,4 +120,4 @@ const ProductForm: React.FC<ProductFormProps> = (props) => {
   </Form>
 }
 
-export default ProductForm;
+export default withPermission(['customer', 'admin']) (ProductForm);
