@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
+import { useHistory } from 'react-router-dom'
 import Swal from 'sweetalert2'
 import { login } from '../../redux/Authentication/Authentication.actions'
 import Button from '../shared/Button'
@@ -13,9 +14,12 @@ const LoginForm = () => {
     pass: ''
   })
 
+  const history = useHistory()
+
   const handleLogin = async () => {
     try {
       await dispatch(login(form))
+      history.push('/')
     } catch (error) {
       Swal.fire(
         'Error',
